@@ -2,7 +2,7 @@
 
 ## 📘 Descripción
 
-Este script de Python 🐍 automatiza la tarea de descargar varios informes del sistema ReportSAE. Está diseñado específicamente para la **UF17** y utiliza la biblioteca Selenium 🌐 para interactuar con la interfaz web del sistema.
+Este script de Python 🐍 automatiza la tarea de descargar varios informes del sistema ReportSAE. Está diseñado específicamente para la **Una unidad funcional del SITP** pero puede ser adapatado, y utiliza la biblioteca Selenium 🌐 para interactuar con la interfaz web del sistema.
 
 ---
 <span style="color:blue">_______________________________________________________________________________________</span>
