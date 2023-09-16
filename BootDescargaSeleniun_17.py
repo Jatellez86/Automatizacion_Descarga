@@ -10,12 +10,15 @@
 from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.common.by import By
+from selenium.webdriver.chrome.options import Options
+from selenium.webdriver.chrome.service import Service
+from webdriver_manager.chrome import ChromeDriverManager
 import time 
 import os
 import shutil
 from datetime import date
 from datetime import datetime, timedelta
-import pandas as pd
+import pandas as pd   
 
 
 # Definicion de variables ---------------------------------------------------------------------
@@ -86,6 +89,14 @@ for i in df_filtrado_uf06['date']:
 chromedriver = 'chromedriver.exe'
 
 # Configura el controlador del navegador para automatizar la interacción con la página web
+# Características en el Web Driver ------------------------------------------------------------
+session_id = False
+loginState = False
+driver = False
+options = Options()
+options.add_argument("start-maximized")
+options.add_experimental_option("excludeSwitches", ["enable-logging"])
+
 # Functions -----------------------------------------------------------------------------------
 def openBrowser():
     global session_id
@@ -93,7 +104,7 @@ def openBrowser():
     global driver    
     try:
         if session_id == False:        
-            driver = webdriver.Chrome(chromedriver)
+            driver = webdriver.Chrome(service = Service(ChromeDriverManager().install()), options = options)
             driver.implicitly_wait(40)  # seconds
             driver.maximize_window()
             session_id = driver.session_id
@@ -102,7 +113,7 @@ def openBrowser():
         print(str(e))
         return False
 
-# Logic ---------------------------------------------------------------------------------------
+# Logic --------------------------------------------------------------------------------
 openBrowser()
 
 
