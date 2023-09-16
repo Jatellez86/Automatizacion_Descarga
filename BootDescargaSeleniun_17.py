@@ -22,8 +22,8 @@ import pandas as pd
 driver = False
 session_id = False
 loginState = False
-user = 'rguevara2'
-password = 'Saegue55'
+user = 'user_prueba'
+password = 'pwd_prueba'
 
 # Fechas a recorrer----------------------------------------------------------------------------
 
