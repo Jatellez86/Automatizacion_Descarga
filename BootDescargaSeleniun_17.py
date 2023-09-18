@@ -119,7 +119,7 @@ openBrowser()
 
 
 # Introduce una demora para esperar que los elementos de la página se carguen
-# pagina principal de reportsae zmo III
+# pagina principal de reportsae
 driver.get('http://10.50.128.91/ReportSAE/Account/Login.aspx?ReturnUrl=%2fReportSAE%2fDefault.aspx')
 time.sleep(1)
 # enviar llaves de usuario y contraseña
